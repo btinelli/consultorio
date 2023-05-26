@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h1>Solicitar Senha</h1>
+  <form>
+    <ion-list>
+      <ion-item>
+        <ion-label>CPF</ion-label>
+        <ion-input
+          name="cpf"
+          required
+          [(ngModel)]="user.cpf"
+          type="number"
+          value=""
+        ></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Data de nascimento</ion-label>
+        <ion-datetime
+          required
+          [(ngModel)]="user.dataNascimento"
+          name="dataNascimento"
+        ></ion-datetime>
+      </ion-item>
+    </ion-list>
+    <button ion-button round (click)="submitCheck();">Confirmar</button>
+  </form>
+</ion-content>

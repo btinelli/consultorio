@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Senhas </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label>Prioridade</ion-label>
+    <ion-toggle [(ngModel)]="checkPrioridade" (click)="changePrioridade()"
+      >Checked Toggle</ion-toggle
+    >
+  </ion-item>
+  <ion-list radio-group>
+    <ion-item *ngFor="let option of senhaList">
+      <ion-label>{{option.senha}}</ion-label>
+      <ion-radio
+        item-left
+        (ionSelect)="selectedSenha(option);"
+        [value]="option.id"
+      ></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button color="success" (click)="complete()" outline>
+    Chamar
+  </button>
+</ion-content>

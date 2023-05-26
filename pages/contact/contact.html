@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title> Senhas chamadas </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list radio-group>
+    <ion-item *ngFor="let option of senhaList">
+      <ion-label>{{option.senha}}</ion-label>
+     
+    </ion-item>
+  </ion-list>
+</ion-content>
